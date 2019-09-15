@@ -1,0 +1,185 @@
+  html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  /*Boton inputs css*/
+    *,
+    :before,
+    :after {
+      box-sizing: border-box;
+    }
+    form {
+      width: 600px;
+      margin: auto;
+    }
+    input,
+    textarea {
+      background: none;
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 320px;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid rgb(29, 93, 136);
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+    input:focus ~ label, input:valid ~ label,
+    textarea:focus ~ label,
+    textarea:valid ~ label {
+      top: -14px;
+      font-size: 12px;
+      color: rgb(0, 0, 0);
+    }
+    input:focus ~ .bar:before,
+    textarea:focus ~ .bar:before {
+      width: 320px;
+    }
+
+    input[type="password"] {
+      letter-spacing: 0.3em;
+    }
+    .bar {
+      position: relative;
+      display: block;
+      width: 320px;
+    }
+    .bar:before {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 0px;
+      position: absolute;
+      background: #2196F3;
+      transition: 300ms ease all;
+      left: 0%;
+    }
+    */
+    .btn {
+      background: rgb(34, 32, 32);
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      outline: none;
+      box-shadow: 0 1px 3px rgba(255, 255, 255), 0 1px 2px rgb(255, 255, 255);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .btn.btn-submit {
+      background: rgb(1, 25, 44);
+      color: #bce0fb;
+    }
+    .btn.btn-submit:hover {
+      background: #86bdeb;
+      color: #063963;
+    }
+
+  /*css select*/
+
+  .custom-select {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    min-width: 180px;
+    margin: 0 auto;
+    border: 1px solid dodgerblue;
+    background-color: #0d8aee;
+    z-index: 10;
+  }
+  .custom-select select {
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 12px 55px 15px 15px;
+    font-size: 14px;
+    color: #2196F3;
+  }
+  .custom-select:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    line-height: 38px;
+    content: "∨";
+    text-align: center;
+    color: #714BB9;
+    font-size: 24px;
+    border-left: 1px solid dodgerblue;
+    z-index: -1;
+  }
+
+  /* Despues de esta linea va a comenzar el codigo perteneciente a la interfaz de menu inicio*/
+  /*Diseño de pagina*/
+body {
+  background: "Images/Fondo_Page.jpg";
+}
+/*Creacion del menu desplegable*/
+.navegacion {
+  width: auto;
+  margin: 10px auto;
+  background: rgb(51, 157, 218);
+}
+.navegacion ul {
+  list-style: none;
+}
+.Menu>li {
+  position: relative;
+  display: inline-block;
+}
+.Menu>li>a {
+  display: block;
+  padding: 15px 70px;
+  color: #000000;
+  font-family: 'Open Sans';
+  text-decoration: none;
+}
+.Menu li a:hover {
+  color: rgb(0, 0, 0);
+  transition: all .3s;
+}
+.Submenu {
+  position: absolute;
+  background: rgb(51, 157, 218);
+  width: 120%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+.Submenu li a {
+  display: block;
+  padding: 15px;
+  font-family: 'Open sans';
+}
+.Menu li:hover .Submenu {
+  visibility: visible;
+  opacity: 1;
+}
+/*Diseño de inicio de sesion*/
+
+form {
+  margin:  auto;
+  background: #c0c0c0;
+  padding: 10px;
+  height: auto;
+  width: auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0)
+}
