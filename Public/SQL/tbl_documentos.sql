@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-09-2019 a las 07:23:00
+-- Tiempo de generación: 17-09-2019 a las 07:49:19
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -37,6 +37,13 @@ CREATE TABLE `tbl_documentos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `tbl_documentos`
+--
+
+INSERT INTO `tbl_documentos` (`id_documento`, `titulo`, `tamanio`, `tipo`, `nombre_archivo`) VALUES
+(13, 'documento inicial', 100152, 'application/pdf', 'php.pdf');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -54,7 +61,7 @@ ALTER TABLE `tbl_documentos`
 -- AUTO_INCREMENT de la tabla `tbl_documentos`
 --
 ALTER TABLE `tbl_documentos`
-  MODIFY `id_documento` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_documento` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

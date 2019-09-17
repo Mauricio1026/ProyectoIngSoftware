@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<html lang="en">
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <link rel="stylesheet" href="Styles/Style.css">
+        <title>Lista de Documentos</title>
     </head>
     <body>
-        <table>
+    <center>
+    <input type="button" value="Regresar" onClick="history.back()"  style='width:100px; height:30px'>
+    </center>
+        <table align="center" border="1" width="1000" cellspacing="2" cellpadding="2">
             <tr>
                 <td align="center">titulo</td>
                 <td align="center">tamaño</td>
@@ -20,16 +20,16 @@ and open the template in the editor.
         <?php
         include 'config_archivo.php';
         $db=new Conect_MySql();
-            $sql = "select*from tbl_documentos";
-            $query = $db->execute($sql);
-            while($datos=$db->fetch_row($query)){?>
-            <tr>
+        $sql = "select*from tbl_documentos";
+        $query = $db->execute($sql);
+        while($datos=$db->fetch_row($query)){?>
+            <tr align="center">
                 <td><?php echo $datos['titulo']; ?></td>
                 <td><?php echo $datos['tamanio']; ?></td>
                 <td><?php echo $datos['tipo']; ?></td>
                 <td><a href="archivo.php?id=<?php echo $datos['id_documento']?>"><?php echo $datos['nombre_archivo']; ?></a></td>
             </tr>
-                
+               
           <?php  } ?>
             
         </table>

@@ -12,7 +12,6 @@
     }
   }
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,18 +20,9 @@
 	</head>
 
 <body>
-
-		<?php if(!empty($user)): ?>
-        <br> Bienvendio. <?= $user['correo']; ?>
-        <br>Usted se encuentra logeado.
-    <?php else: ?>
-    <center>
-      <a href="Salir.php"><input type="button"class="btn btn-submit" value="salir"></a>
-      </center>
     <img src="Images/ImagenAdmin.jpg" width= "100%" height="400"/>	
-    
     <div style="width: 500px;margin: auto;border: 1px solid blue;padding: 30px;">
-            <h4>Subir PDF</h4>
+            <h4>Subir archivos a la plataforma</h4>
             <form method="post" action="" enctype="multipart/form-data">
                 <table>
                     <tr>
@@ -50,9 +40,21 @@
                       <td><a href="subir_archivos/lista.php"><input type="button" value="Lista" class="btn btn-submit"></a></td>
                     </tr>
                 </table>
-            </form>            
-        </div>
-        
+            </form>          
+        </div> 
+		<?php if(!empty($user)): ?>
+        <br> Bienvendio. <?= $user['correo']; ?>
+        <br>Usted se encuentra logeado.
+    <?php else: ?>
+        <br>
+      <table align="right">
+        <tr>
+            <td>
+            <a href="Salir.php"><input type="button"class="btn btn-submit" value="salir"></a>
+            </td>
+        </tr>
+      
+      </table>
     <?php endif; ?>
     <?php
   include_once 'subir_archivos/config_archivo.php';
