@@ -59,7 +59,7 @@
             <b>Correo</b><input name="correo" type="email" placeholder="Ingresar Usuario">
             <!-- PASSWORD INPUT -->
             <b>Contraseña</b><input name="clave" type="password" placeholder="Ingresar Contraseña">
-            <input type="submit" value="Iniciar"></a>
+            <input type="submit" value="Iniciar">
             <a href="Registro.php">¿No tienes una Cuenta?</a>
         </form>
     </div>
